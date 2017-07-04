@@ -31,6 +31,8 @@
 </style>
 <template>
     <div class="index">
+        <v-menu></v-menu>
+        
         <Row type="flex" justify="center" align="middle">
             <Col span="24">
                 <h1>
@@ -47,7 +49,11 @@
     </div>
 </template>
 <script>
+    import menu from "./menu.vue";
     export default {
+        components: {
+            'v-menu': menu
+        },
         data:  function(){
             return {
                 visible: false
